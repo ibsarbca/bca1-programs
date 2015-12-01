@@ -1,3 +1,7 @@
+/**
+ * Program to check if a digit entered is a palindrome
+ * Which means if the original and reverse numbers are the same
+ */
 
 #include <stdio.h>
 

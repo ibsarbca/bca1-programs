@@ -1,8 +1,8 @@
-#include <stdio.h>
-
 /*
  * Program to print max and min between 5 numbers
  */
+
+#include <stdio.h>
 
 int main()
 {

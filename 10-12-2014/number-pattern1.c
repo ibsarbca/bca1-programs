@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /*
  * Program to print the following pattern:
  *
@@ -12,6 +10,8 @@
  * 1
  *
  */
+
+#include <stdio.h>
 
 int main()
 {
