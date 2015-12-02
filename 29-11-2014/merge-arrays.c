@@ -38,7 +38,7 @@ int main()
 			{
 				temp = C[j -1];
 				C[j - 1] = C[j];
-				C[j] = C[j -1];				
+				C[j] = temp;				
 			}
 		}
 	}
