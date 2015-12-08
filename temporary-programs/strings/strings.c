@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+/*
+ * Shows you that strings are basically arrays but have special
+ * considerations in C.
+ */
 int main()
 {
 	char string[5] = {'h', 'e', 'l', 'l', 'o'};

@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+/*
+ * Shows you how boring it would be to copy arrays of integers without
+ * loops or anything
+ */
 int main()
 {
 	int arr1[5] = {1, 2, 3, 4, 5};

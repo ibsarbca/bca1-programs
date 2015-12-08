@@ -10,10 +10,13 @@ void sum_n(int n)
 	printf("%d\n", sum);
 }
 
-
-// <return_type> <function_name>([datatype param1], [datatype param])
-// {
-// }
+/*
+ * Basic syntax of a function
+ *
+<return_type> <function_name>([datatype param1], [datatype param])
+{
+}
+*/
 
 
 int main()
