@@ -45,6 +45,7 @@ rs.open "SELECT * FROM detail WHERE id=" & id, conn
 	</tr>
 </table>
 </form>
+<!-- #include file="footer.inc" -->
 </body>
 <%
 rs.close
