@@ -9,7 +9,7 @@
 	<h3> Please provide login details </h3>
 	<!-- This displays the error message -->
 	<font color='red'><%=Request.QueryString("m")%></font>
-	<form action
+	<form action='login.asp' method='post'>
 		<p>User ID: <input type="text" name="txtId"></p>
 		<p>Password: <input type="password" name='txtPwd'></pwd>
 		<br />
@@ -20,8 +20,11 @@
 ' Create connection and get the record set, if successful, redirect user to view.asp
 if request.form("subBtn") = "Login" then
 	set conn=Server.CreateObject("ADODB.Connection")
-	conn.Provider="Microsoft.Jet.OLEDB.4.0"
-	conn.Open Request.ServerVariables("APPL_PHYISICAL_PATH") & "addressbook.mdb"
+	conn.open "addressbookdsn"
+	'conn.Provider="Microsoft.Jet.OLEDB.4.0"
+	'conn.Open Request.ServerVariables("APPL_PHYISICAL_PATH") & "addressbook.mdb"
+	
+	
 	set rs = Server.CreateObject("ADODB.RecordSet")
 	rs.open "SELECT id, user_name, user_password FROM users WHERE user_name = '" & trim(request.form("txtId")) & "' AND user_password = '" & trim(request.form("txtPwd")) & "'", conn
 
