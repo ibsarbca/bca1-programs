@@ -1,11 +1,17 @@
 <html>
 <head>
 <title>Address Book | Login</title>
+<!-- This sets the error message. Theoretically this should be in the Global.asa file, but since that file is, well, global, we are not using this here
+-->
+<%
+if Application("login_message") = "" then
+	Application("login_message") = "Error: Session expired or direct access"
+end if
+%>
 </head>
 <body>
 	<center>
 	<!-- #include file="header.inc" -->
-
 	<h3> Please provide login details </h3>
 	<!-- This displays the error message -->
 	<font color='red'><%=Request.QueryString("m")%></font>
