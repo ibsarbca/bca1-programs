@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<body>
+<script type="text/javascript">
+/*
+Get a number between 1 and 12, show month according to number 
+*/
+var num = prompt("Enter a number between 1 and 12");
+
+if (num > 12 || num < 1)
+	alert("Error: Num must be between 1 and 12")
+
+var months = {
+	1: "Jan",
+	2: "Feb",
+	3: "Mar",
+	4: "Apr",
+	5: "May",
+	6: "Jun",
+	7: "Jul",
+	8: "Aug",
+	9: "Sep",
+	10: "Oct",
+	11: "Nov",
+	12: "Dec"
+};
+
+document.write(months[num]);
+
+</script>
+
+</body>
+</html>
