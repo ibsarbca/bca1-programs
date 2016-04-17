@@ -1,0 +1,175 @@
+[33mcommit b219d4fd95443680276048df4f89b82f1734d40e[m
+Merge: e6b6061 ba04770
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Sun Apr 17 10:51:35 2016 +0530
+
+    Merge branch 'master' of https://github.com/ibsarbca/bca1-programs
+
+[33mcommit e6b6061e6690555888d7ed7b4a5a3128007fb903[m
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Sun Apr 17 10:49:57 2016 +0530
+
+    Last Change: Added first ASP question from Dec 2015 paper
+
+[33mcommit 94735897166e2b0d364ded9ecdf302c24930dffd[m
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Sun Apr 17 10:44:53 2016 +0530
+
+    Last Change: Added first ASP question from Dec 2015 paper
+
+[33mcommit ba0477050ca84e8fb42cd9cb51306783dcf84c71[m
+Author: ibsarbca <ibsarbca@gmail.com>
+Date:   Mon Apr 11 18:56:22 2016 +0530
+
+    Last Change: Added files that add records, with validation, and logout functionality
+
+[33mcommit a4194215c5fa5181215f0d45f620b67dcf921227[m
+Author: ibsarbca <ibsarbca@gmail.com>
+Date:   Mon Apr 11 16:49:06 2016 +0530
+
+    Last Change: Added files that delete records
+
+[33mcommit 405e8d61685d01c52b188e55ecdcf157ed1deed7[m
+Author: ibsarbca <ibsarbca@gmail.com>
+Date:   Mon Apr 11 16:26:01 2016 +0530
+
+    Last Change: do_update.asp added.
+
+[33mcommit 077e3e08e6a3e55a2a4ce7fa81ba610b26ce7a96[m
+Author: ibsarbca <ibsarbca@gmail.com>
+Date:   Mon Apr 11 15:56:58 2016 +0530
+
+    Last change: More practicals code added.
+
+[33mcommit aca172ca8a7397e21ecec80770ae9e6fde943dcc[m
+Author: ibsarbca <ibsarbca@gmail.com>
+Date:   Mon Apr 11 15:51:12 2016 +0530
+
+    Last Change: code sent by priya ma'am added. This section will be updated
+
+[33mcommit 2442cf6b413822f8896f30fa7b1569f408b5a368[m
+Author: ibsarbca <ibsarbca@gmail.com>
+Date:   Mon Apr 11 15:09:33 2016 +0530
+
+    Last Change: Finished View page
+
+[33mcommit b7f9ab489905a627c006f5fc31142bae34407265[m
+Merge: 97e2ada 4368fed
+Author: ibsarbca <ibsarbca@gmail.com>
+Date:   Mon Apr 11 15:02:24 2016 +0530
+
+    Merge branch 'master' of https://github.com/ibsarbca/bca1-programs
+
+[33mcommit 97e2ada6aab968528bf0e55495b535f282e5c5c7[m
+Author: ibsarbca <ibsarbca@gmail.com>
+Date:   Mon Apr 11 15:00:52 2016 +0530
+
+    Last Change: Added login.asp in address book
+
+[33mcommit 4368fedc95a2fe6060dca060db3f076c06c66601[m
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Thu Mar 10 21:22:15 2016 +0530
+
+    Last Change: March 10: Examples of using the Math class
+
+[33mcommit f25dd1cbfd6b9bbe016b8b7cbf9b0dda669e6fd0[m
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Wed Mar 9 15:55:36 2016 +0530
+
+    Last Change: Programs for March 9
+
+[33mcommit 70c6ea6f0aa557a5296e89c65d4824588ee244c8[m
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Thu Mar 3 12:19:38 2016 +0530
+
+    Last Change: added programs upto March 3
+
+[33mcommit 1f3ad2918401a8ae9edd4f78a9429d27a8dbedaf[m
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Wed Feb 24 07:50:03 2016 +0530
+
+    Last Change: Added some AWD programs
+
+[33mcommit 13633d66002d41bff319eb65667ea78cca8b1d06[m
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Wed Dec 9 19:02:02 2015 +0530
+
+    Added a program to find and replace and a few others
+
+[33mcommit fcbb852dda1245c22c094e63cb560f9f03e07ccf[m
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Wed Dec 9 14:26:25 2015 +0530
+
+    Added program to concat two strings without string.h
+
+[33mcommit f1b2d709573e133a93e3900811e2fb92afdebea4[m
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Tue Dec 8 10:26:01 2015 +0530
+
+    Commented some of the programs so that people can understand better
+
+[33mcommit 01eb030f4b08b449553b82f6f13cd7735964dac6[m
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Sat Dec 5 01:49:20 2015 +0530
+
+    Added some more examples in temporary-programs, including operator overloading examples
+
+[33mcommit dadd327912d754296854bbe50a12cbab762a726a[m
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Wed Dec 2 23:28:35 2015 +0530
+
+    Added a program for functions
+
+[33mcommit 031b480ed3994206adeabb5b961ee8c25e572c7f[m
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Wed Dec 2 23:24:58 2015 +0530
+
+    Added some temporary programs for basics, this one is strings
+
+[33mcommit c8250fece4e788b4c7b6f25ded2024b39f53302c[m
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Wed Dec 2 17:28:59 2015 +0530
+
+    Cleaned up some more
+
+[33mcommit 10bf03046d5e33f31a8af29a56394db79e6cf9ca[m
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Wed Dec 2 14:48:52 2015 +0530
+
+    At a point where the programs are repeating themselves
+
+[33mcommit c7815903965522dc6461324be9a9ca4518b1d144[m
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Wed Dec 2 12:54:09 2015 +0530
+
+    Finished most of paper 1
+
+[33mcommit a4b2ef34e5cf818c8a3af0bccbc8823632ae19cd[m
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Wed Dec 2 12:48:48 2015 +0530
+
+    Added program to merge 2 arrays and sort them
+
+[33mcommit 1771e870a8b8e37bef9c0ef98c2976c88645ce26[m
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Tue Dec 1 23:04:35 2015 +0530
+
+    Made some minor documentation changes
+
+[33mcommit b3aac417c49e94570d156c7f3ffb43aec2ca607f[m
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Tue Dec 1 23:02:37 2015 +0530
+
+    Added palindrome number
+
+[33mcommit 76d6c7a1fb6c803828238a0d244177e23700aac8[m
+Author: Dhaval Anjaria <dhv2712@gmail.com>
+Date:   Tue Dec 1 22:47:57 2015 +0530
+
+    Added min-max and a number pattern program
+
+[33mcommit 8c278aff99b6796579d5c01b18a195a606501b64[m
+Author: dhvl2712 <dhv2712@gmail.com>
+Date:   Tue Dec 1 21:37:15 2015 +0530
+
+    Initial commit
