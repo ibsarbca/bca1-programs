@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+
+
+<form action="order-js.html" method="get" onsubmit="select_order()">
+	Bhel: <input type="checkbox" name="chk1"> <br />
+	Panipuri: <input type="checkbox" name="chk2"> <br />
+	Samosa: <input type="checkbox" name="chk3"> <br />
+	Kachori: <input type="checkbox" name="chk4"> <br />
+	Batata Wada: <input type="checkbox" name="chk5"> <br />
+
+	<input type="submit" value="submit">
+</form>
+<textarea id="txtarea" rows=20 cols=20></textarea> <br />
+<button onclick="select_order()"/ >BUTTON</button>
+<script>
+	function select_order() {
+		var items = ["Bhel", "Panipuri", "Samosa", "Kachori", "Batata Wada"];
+		var myform = document.forms[0];
+		for(var i = 0; i < myform.length; i++) {
+			console.log(myform.elements[i].checked);
+			if(myform.elements[i].checked == true) {
+				document.getElementById("txtarea").value += items[i] + "\n";
+			}
+		}
+	}
+</script>
+</body>
+</html>
