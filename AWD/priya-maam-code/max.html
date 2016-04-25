@@ -1,0 +1,43 @@
+<html>
+<head><title></title>
+<script type="text/javascript">
+function maxnum()
+{
+ num1=parseInt(document.f1.num1.value);
+ num2=parseInt(document.f1.num2.value);
+if(num1>num2)
+document.f1.op.value=num1;
+else
+document.f1.op.value=num2;
+}
+function minnum()
+{
+ num1=parseInt(document.f1.num1.value);
+ num2=parseInt(document.f1.num2.value);
+if(num1<num2)
+document.f1.op.value=num1;
+else
+document.f1.op.value=num2;
+}
+function finddiv()
+{
+num1=parseInt(document.f1.num1.value);
+ num2=parseInt(document.f1.num2.value);
+if(num1%num2==0)
+document.f1.op.value=num1+ " is divisible by "+num2;
+else
+document.f1.op.value=num1+ " is not divisible by "+num2;;
+}
+</script>
+</head>
+<body>
+<form name="f1">
+Enter first number :<input type="text" name="num1"><br>
+Enter second number :<input type="text" name="num2"><br>
+output :<input type="text" name="op"><br>
+<input type="button" value="check maximum" onClick="maxnum()">
+<input type="button" value="check minimum" onClick="minnum()">
+<input type="button" value="check divisibility" onClick="finddiv()">
+</form>
+</body>
+</html>
