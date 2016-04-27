@@ -24,6 +24,7 @@ rs.Open sql_statement, conn
 	<td><%=rs.fields.item("student_id").value%></td>
 	<td><%=rs.fields.item("student_name").value%></td>
 	<td><%=rs.fields.item("course").value%></td>
+</table>
 
 </body>
 </html>
