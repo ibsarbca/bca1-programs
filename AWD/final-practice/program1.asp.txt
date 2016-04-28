@@ -1,0 +1,18 @@
+<html>
+<body>
+
+<%
+
+dim x
+x = "Hello World"
+
+dim character1
+character1 = left(x, 1)
+
+response.write(character1)
+	
+%>
+
+
+</body>
+</html>

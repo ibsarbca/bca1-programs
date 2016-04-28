@@ -1,0 +1,15 @@
+<html>
+<body>
+
+<%
+
+dim i
+i = 10
+dim x
+x = i * 1000
+	
+%>
+
+
+</body>
+</html>
