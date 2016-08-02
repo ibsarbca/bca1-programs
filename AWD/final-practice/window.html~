@@ -1,0 +1,14 @@
+<html>
+<head>
+	<title>Hello World</html>
+</head>
+<body>
+<script>
+
+document.write("Inner Height: " + window.innerHeight);
+document.write("Inner Height: " + window.name);
+
+
+</script>
+
+</html
