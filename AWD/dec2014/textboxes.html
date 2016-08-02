@@ -1,0 +1,26 @@
+<html>
+<head>
+</head>
+<body>
+
+<input type="text" id="num1">
+<input type="text" id="num2">
+<input type="text" id="num3">
+
+<button onclick="add()">ADD</button>
+
+<script>
+
+var num1 = document.getElementById("num1");
+var num2 = document.getElementById("num2");
+var num3 = document.getElementById("num3");
+
+function add() {
+	console.log("ADD CALLED");
+	num3.value = parseInt(num1.value) + parseInt(num2.value);
+
+}
+</script>
+
+</body>
+</html>

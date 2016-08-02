@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>PROGRAM</title>
+<meta charset="utf-8">
+<style>
+	p {
+		color: red;
+	}
+</style>
+
+<body>
+
+<%
+
+dim i
+response.write("<table border='1' >")
+for i = 1 to 10
+	response.write("<tr>")
+	response.write("<td>")
+		response.write(i)
+	response.write("</td>")
+	response.write("</tr>")
+next
+response.write("</table>")
+
+
+%>
+
+
+<pre>
+	.........
+	.........
+	.........
+.........
+.........
+	.........
+.........
+	.........
+.........
+	.........
+.........
+<pre>
+
+<p>
+HELLO WORLD
+</p>
+
+</body>
+</html>

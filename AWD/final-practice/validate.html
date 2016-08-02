@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<form name="form0" onsubmit="validateForm()">
+	NAME: <input type="text" name="name"> <br />
+	AGE: <input type="text" name="age"><br />
+	<input type="submit" value="submit">
+
+</form>
+
+<script>
+var myForm = document.forms["form0"];
+
+function validateForm() {
+	//console.log("VALIDATE FORM CALLED");
+	var name = myForm["name"].value;
+	var age = myForm["age"].value;
+
+	if(name == "")
+		document.write("ERROR IN NAME <br>");
+	if(!isNaN(age)) 
+		document.write("ERROR IN AGE <br>");
+
+}
+</script>
+</body>
+</html>
