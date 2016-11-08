@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MovieBooking", "MovieBooking\MovieBooking.vbproj", "{EFF469EA-B24A-463F-B44B-F7974FCB038B}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ListBoxTransferExample", "ListBoxTransferExample\ListBoxTransferExample.vbproj", "{B6B77F44-4074-474B-BC98-0A873B64ECC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EFF469EA-B24A-463F-B44B-F7974FCB038B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EFF469EA-B24A-463F-B44B-F7974FCB038B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EFF469EA-B24A-463F-B44B-F7974FCB038B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EFF469EA-B24A-463F-B44B-F7974FCB038B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6B77F44-4074-474B-BC98-0A873B64ECC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6B77F44-4074-474B-BC98-0A873B64ECC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6B77F44-4074-474B-BC98-0A873B64ECC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6B77F44-4074-474B-BC98-0A873B64ECC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

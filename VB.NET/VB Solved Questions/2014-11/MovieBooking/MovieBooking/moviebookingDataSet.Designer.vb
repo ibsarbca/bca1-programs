@@ -20,9 +20,9 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("moviebookingComboBoxDataSet"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("moviebookingDataSet"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class moviebookingComboBoxDataSet
+Partial Public Class moviebookingDataSet
     Inherits Global.System.Data.DataSet
     
     Private tablemovies As moviesDataTable
@@ -128,7 +128,7 @@ Partial Public Class moviebookingComboBoxDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As moviebookingComboBoxDataSet = CType(MyBase.Clone,moviebookingComboBoxDataSet)
+        Dim cln As moviebookingDataSet = CType(MyBase.Clone,moviebookingDataSet)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -199,9 +199,9 @@ Partial Public Class moviebookingComboBoxDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "moviebookingComboBoxDataSet"
+        Me.DataSetName = "moviebookingDataSet"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/moviebookingComboBoxDataSet.xsd"
+        Me.Namespace = "http://tempuri.org/moviebookingDataSet.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tablemovies = New moviesDataTable()
@@ -225,7 +225,7 @@ Partial Public Class moviebookingComboBoxDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As moviebookingComboBoxDataSet = New moviebookingComboBoxDataSet()
+        Dim ds As moviebookingDataSet = New moviebookingDataSet()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -283,13 +283,11 @@ Partial Public Class moviebookingComboBoxDataSet
     Partial Public Class moviesDataTable
         Inherits Global.System.Data.TypedTableBase(Of moviesRow)
         
+        Private columnid As Global.System.Data.DataColumn
+        
         Private columnname As Global.System.Data.DataColumn
         
-        Private columnmovieDate As Global.System.Data.DataColumn
-        
-        Private columnmovieTime As Global.System.Data.DataColumn
-        
-        Private columnisBooked As Global.System.Data.DataColumn
+        Private columndateAndTime As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -328,6 +326,14 @@ Partial Public Class moviebookingComboBoxDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property idColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property nameColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnname
@@ -336,25 +342,9 @@ Partial Public Class moviebookingComboBoxDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property movieDateColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property dateAndTimeColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnmovieDate
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property movieTimeColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnmovieTime
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property isBookedColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnisBooked
+                Return Me.columndateAndTime
             End Get
         End Property
         
@@ -395,9 +385,9 @@ Partial Public Class moviebookingComboBoxDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddmoviesRow(ByVal name As String, ByVal movieDate As Date, ByVal movieTime As System.TimeSpan, ByVal isBooked As String) As moviesRow
+        Public Overloads Function AddmoviesRow(ByVal name As String, ByVal dateAndTime As Date) As moviesRow
             Dim rowmoviesRow As moviesRow = CType(Me.NewRow,moviesRow)
-            Dim columnValuesArray() As Object = New Object() {name, movieDate, movieTime, isBooked}
+            Dim columnValuesArray() As Object = New Object() {Nothing, name, dateAndTime}
             rowmoviesRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowmoviesRow)
             Return rowmoviesRow
@@ -405,8 +395,8 @@ Partial Public Class moviebookingComboBoxDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindBymovieDatemovieTime(ByVal movieDate As Date, ByVal movieTime As System.TimeSpan) As moviesRow
-            Return CType(Me.Rows.Find(New Object() {movieDate, movieTime}),moviesRow)
+        Public Function FindByid(ByVal id As Integer) As moviesRow
+            Return CType(Me.Rows.Find(New Object() {id}),moviesRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -426,29 +416,29 @@ Partial Public Class moviebookingComboBoxDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnid = MyBase.Columns("id")
             Me.columnname = MyBase.Columns("name")
-            Me.columnmovieDate = MyBase.Columns("movieDate")
-            Me.columnmovieTime = MyBase.Columns("movieTime")
-            Me.columnisBooked = MyBase.Columns("isBooked")
+            Me.columndateAndTime = MyBase.Columns("dateAndTime")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitClass()
+            Me.columnid = New Global.System.Data.DataColumn("id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid)
             Me.columnname = New Global.System.Data.DataColumn("name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnname)
-            Me.columnmovieDate = New Global.System.Data.DataColumn("movieDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnmovieDate)
-            Me.columnmovieTime = New Global.System.Data.DataColumn("movieTime", GetType(Global.System.TimeSpan), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnmovieTime)
-            Me.columnisBooked = New Global.System.Data.DataColumn("isBooked", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnisBooked)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnmovieDate, Me.columnmovieTime}, true))
+            Me.columndateAndTime = New Global.System.Data.DataColumn("dateAndTime", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndateAndTime)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid}, true))
+            Me.columnid.AutoIncrement = true
+            Me.columnid.AutoIncrementSeed = -1
+            Me.columnid.AutoIncrementStep = -1
+            Me.columnid.AllowDBNull = false
+            Me.columnid.ReadOnly = true
+            Me.columnid.Unique = true
             Me.columnname.MaxLength = 2147483647
-            Me.columnmovieDate.AllowDBNull = false
-            Me.columnmovieTime.AllowDBNull = false
-            Me.columnisBooked.AllowDBNull = false
-            Me.columnisBooked.MaxLength = 1
+            Me.columndateAndTime.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -516,7 +506,7 @@ Partial Public Class moviebookingComboBoxDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As moviebookingComboBoxDataSet = New moviebookingComboBoxDataSet()
+            Dim ds As moviebookingDataSet = New moviebookingDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -595,6 +585,17 @@ Partial Public Class moviebookingComboBoxDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id() As Integer
+            Get
+                Return CType(Me(Me.tablemovies.idColumn),Integer)
+            End Get
+            Set
+                Me(Me.tablemovies.idColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property name() As String
             Get
                 Try 
@@ -610,34 +611,12 @@ Partial Public Class moviebookingComboBoxDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property movieDate() As Date
+        Public Property dateAndTime() As Date
             Get
-                Return CType(Me(Me.tablemovies.movieDateColumn),Date)
+                Return CType(Me(Me.tablemovies.dateAndTimeColumn),Date)
             End Get
             Set
-                Me(Me.tablemovies.movieDateColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property movieTime() As System.TimeSpan
-            Get
-                Return CType(Me(Me.tablemovies.movieTimeColumn),Global.System.TimeSpan)
-            End Get
-            Set
-                Me(Me.tablemovies.movieTimeColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property isBooked() As String
-            Get
-                Return CType(Me(Me.tablemovies.isBookedColumn),String)
-            End Get
-            Set
-                Me(Me.tablemovies.isBookedColumn) = value
+                Me(Me.tablemovies.dateAndTimeColumn) = value
             End Set
         End Property
         
@@ -691,7 +670,7 @@ Partial Public Class moviebookingComboBoxDataSet
     End Class
 End Class
 
-Namespace moviebookingComboBoxDataSetTableAdapters
+Namespace moviebookingDataSetTableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -820,45 +799,34 @@ Namespace moviebookingComboBoxDataSetTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "movies"
+            tableMapping.ColumnMappings.Add("id", "id")
             tableMapping.ColumnMappings.Add("name", "name")
-            tableMapping.ColumnMappings.Add("movieDate", "movieDate")
-            tableMapping.ColumnMappings.Add("movieTime", "movieTime")
-            tableMapping.ColumnMappings.Add("isBooked", "isBooked")
+            tableMapping.ColumnMappings.Add("dateAndTime", "dateAndTime")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[movies] WHERE (([movieDate] = @Original_movieDate) AND ([movie"& _ 
-                "Time] = @Original_movieTime) AND ([isBooked] = @Original_isBooked))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[movies] WHERE (([id] = @Original_id) AND ([dateAndTime] = @Ori"& _ 
+                "ginal_dateAndTime))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_movieDate", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "movieDate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_movieTime", Global.System.Data.SqlDbType.Time, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "movieTime", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_isBooked", Global.System.Data.SqlDbType.NChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "isBooked", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_dateAndTime", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "dateAndTime", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[movies] ([name], [movieDate], [movieTime], [isBooked]) VALUES "& _ 
-                "(@name, @movieDate, @movieTime, @isBooked);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT name, movieDate, movieTime, "& _ 
-                "isBooked FROM movies WHERE (movieDate = @movieDate) AND (movieTime = @movieTime)"& _ 
-                ""
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[movies] ([name], [dateAndTime]) VALUES (@name, @dateAndTime);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id, name, dateAndTime FROM movies WHERE (id = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@movieDate", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "movieDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@movieTime", Global.System.Data.SqlDbType.Time, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "movieTime", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@isBooked", Global.System.Data.SqlDbType.NChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "isBooked", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@dateAndTime", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "dateAndTime", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[movies] SET [name] = @name, [movieDate] = @movieDate, [movieTime] ="& _ 
-                " @movieTime, [isBooked] = @isBooked WHERE (([movieDate] = @Original_movieDate) A"& _ 
-                "ND ([movieTime] = @Original_movieTime) AND ([isBooked] = @Original_isBooked));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)& _ 
-                "SELECT name, movieDate, movieTime, isBooked FROM movies WHERE (movieDate = @movi"& _ 
-                "eDate) AND (movieTime = @movieTime)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[movies] SET [name] = @name, [dateAndTime] = @dateAndTime WHERE (([i"& _ 
+                "d] = @Original_id) AND ([dateAndTime] = @Original_dateAndTime));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id, nam"& _ 
+                "e, dateAndTime FROM movies WHERE (id = @id)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@movieDate", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "movieDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@movieTime", Global.System.Data.SqlDbType.Time, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "movieTime", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@isBooked", Global.System.Data.SqlDbType.NChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "isBooked", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_movieDate", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "movieDate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_movieTime", Global.System.Data.SqlDbType.Time, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "movieTime", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_isBooked", Global.System.Data.SqlDbType.NChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "isBooked", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@dateAndTime", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "dateAndTime", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_dateAndTime", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "dateAndTime", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -874,7 +842,7 @@ Namespace moviebookingComboBoxDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT name, movieDate, movieTime, isBooked FROM dbo.movies"
+            Me._commandCollection(0).CommandText = "SELECT id, name, dateAndTime FROM dbo.movies"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -882,7 +850,7 @@ Namespace moviebookingComboBoxDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As moviebookingComboBoxDataSet.moviesDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As moviebookingDataSet.moviesDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -895,9 +863,9 @@ Namespace moviebookingComboBoxDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As moviebookingComboBoxDataSet.moviesDataTable
+        Public Overloads Overridable Function GetData() As moviebookingDataSet.moviesDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As moviebookingComboBoxDataSet.moviesDataTable = New moviebookingComboBoxDataSet.moviesDataTable()
+            Dim dataTable As moviebookingDataSet.moviesDataTable = New moviebookingDataSet.moviesDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -905,14 +873,14 @@ Namespace moviebookingComboBoxDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As moviebookingComboBoxDataSet.moviesDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As moviebookingDataSet.moviesDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As moviebookingComboBoxDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As moviebookingDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "movies")
         End Function
         
@@ -934,14 +902,9 @@ Namespace moviebookingComboBoxDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_movieDate As Date, ByVal Original_movieTime As System.TimeSpan, ByVal Original_isBooked As String) As Integer
-            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_movieDate,Date)
-            Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_movieTime,System.TimeSpan)
-            If (Original_isBooked Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_isBooked")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_isBooked,String)
-            End If
+        Public Overloads Overridable Function Delete(ByVal Original_id As Integer, ByVal Original_dateAndTime As Date) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_id,Integer)
+            Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_dateAndTime,Date)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -961,19 +924,13 @@ Namespace moviebookingComboBoxDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal name As String, ByVal movieDate As Date, ByVal movieTime As System.TimeSpan, ByVal isBooked As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal name As String, ByVal dateAndTime As Date) As Integer
             If (name Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(name,String)
             End If
-            Me.Adapter.InsertCommand.Parameters(1).Value = CType(movieDate,Date)
-            Me.Adapter.InsertCommand.Parameters(2).Value = CType(movieTime,System.TimeSpan)
-            If (isBooked Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("isBooked")
-            Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(isBooked,String)
-            End If
+            Me.Adapter.InsertCommand.Parameters(1).Value = CType(dateAndTime,Date)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -993,26 +950,16 @@ Namespace moviebookingComboBoxDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal name As String, ByVal movieDate As Date, ByVal movieTime As System.TimeSpan, ByVal isBooked As String, ByVal Original_movieDate As Date, ByVal Original_movieTime As System.TimeSpan, ByVal Original_isBooked As String) As Integer
+        Public Overloads Overridable Function Update(ByVal name As String, ByVal dateAndTime As Date, ByVal Original_id As Integer, ByVal Original_dateAndTime As Date, ByVal id As Integer) As Integer
             If (name Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(name,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(1).Value = CType(movieDate,Date)
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(movieTime,System.TimeSpan)
-            If (isBooked Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("isBooked")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(isBooked,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_movieDate,Date)
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_movieTime,System.TimeSpan)
-            If (Original_isBooked Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_isBooked")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_isBooked,String)
-            End If
+            Me.Adapter.UpdateCommand.Parameters(1).Value = CType(dateAndTime,Date)
+            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Original_id,Integer)
+            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Original_dateAndTime,Date)
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(id,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -1032,8 +979,8 @@ Namespace moviebookingComboBoxDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal name As String, ByVal isBooked As String, ByVal Original_movieDate As Date, ByVal Original_movieTime As System.TimeSpan, ByVal Original_isBooked As String) As Integer
-            Return Me.Update(name, Original_movieDate, Original_movieTime, isBooked, Original_movieDate, Original_movieTime, Original_isBooked)
+        Public Overloads Overridable Function Update(ByVal name As String, ByVal dateAndTime As Date, ByVal Original_id As Integer, ByVal Original_dateAndTime As Date) As Integer
+            Return Me.Update(name, dateAndTime, Original_id, Original_dateAndTime, Original_id)
         End Function
     End Class
     
@@ -1129,7 +1076,7 @@ Namespace moviebookingComboBoxDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As moviebookingComboBoxDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As moviebookingDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._moviesTableAdapter) Is Nothing) Then
                 Dim updatedRows() As Global.System.Data.DataRow = dataSet.movies.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
@@ -1148,7 +1095,7 @@ Namespace moviebookingComboBoxDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As moviebookingComboBoxDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As moviebookingDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._moviesTableAdapter) Is Nothing) Then
                 Dim addedRows() As Global.System.Data.DataRow = dataSet.movies.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
@@ -1166,7 +1113,7 @@ Namespace moviebookingComboBoxDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As moviebookingComboBoxDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As moviebookingDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._moviesTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.movies.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
@@ -1210,7 +1157,7 @@ Namespace moviebookingComboBoxDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As moviebookingComboBoxDataSet) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As moviebookingDataSet) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If

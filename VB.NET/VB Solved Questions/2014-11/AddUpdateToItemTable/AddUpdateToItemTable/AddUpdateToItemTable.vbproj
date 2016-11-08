@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EFF469EA-B24A-463F-B44B-F7974FCB038B}</ProjectGuid>
+    <ProjectGuid>{8C7A5963-9C8A-48AF-ADC4-A16AA3F13039}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>MovieBooking.My.MyApplication</StartupObject>
-    <RootNamespace>MovieBooking</RootNamespace>
-    <AssemblyName>MovieBooking</AssemblyName>
+    <StartupObject>AddUpdateToItemTable.My.MyApplication</StartupObject>
+    <RootNamespace>AddUpdateToItemTable</RootNamespace>
+    <AssemblyName>AddUpdateToItemTable</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -35,7 +35,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>MovieBooking.xml</DocumentationFile>
+    <DocumentationFile>AddUpdateToItemTable.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -45,7 +45,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>MovieBooking.xml</DocumentationFile>
+    <DocumentationFile>AddUpdateToItemTable.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -92,10 +92,10 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="moviebookingDataSet.Designer.vb">
+    <Compile Include="itemsdbDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>moviebookingDataSet.xsd</DependentUpon>
+      <DependentUpon>itemsdbDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -125,16 +125,16 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="moviebookingDataSet.xsc">
-      <DependentUpon>moviebookingDataSet.xsd</DependentUpon>
+    <None Include="itemsdbDataSet.xsc">
+      <DependentUpon>itemsdbDataSet.xsd</DependentUpon>
     </None>
-    <None Include="moviebookingDataSet.xsd">
+    <None Include="itemsdbDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>moviebookingDataSet.Designer.vb</LastGenOutput>
+      <LastGenOutput>itemsdbDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="moviebookingDataSet.xss">
-      <DependentUpon>moviebookingDataSet.xsd</DependentUpon>
+    <None Include="itemsdbDataSet.xss">
+      <DependentUpon>itemsdbDataSet.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -148,12 +148,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="moviebooking.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="moviebooking_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>moviebooking.mdf</DependentUpon>
+    <Content Include="itemsdb.mdf" />
+    <Content Include="itemsdb_log.ldf">
+      <DependentUpon>itemsdb.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>

@@ -23,81 +23,79 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.DateComboBox = New System.Windows.Forms.ComboBox()
-        Me.TimeComboBox = New System.Windows.Forms.ComboBox()
-        Me.MoviebookingComboBoxDataSet = New MovieBooking.moviebookingComboBoxDataSet()
-        Me.MoviesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MoviesTableAdapter = New MovieBooking.moviebookingComboBoxDataSetTableAdapters.moviesTableAdapter()
         Me.BookButton = New System.Windows.Forms.Button()
-        CType(Me.MoviebookingComboBoxDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.MoviesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MoviebookingDataSet = New MovieBooking.moviebookingDataSet()
+        Me.MoviesTableAdapter = New MovieBooking.moviebookingDataSetTableAdapters.moviesTableAdapter()
+        Me.CancelButton = New System.Windows.Forms.Button()
         CType(Me.MoviesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MoviebookingDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DateComboBox
+        'BookButton
         '
-        Me.DateComboBox.DataSource = Me.MoviesBindingSource
-        Me.DateComboBox.DisplayMember = "movieDate"
-        Me.DateComboBox.FormattingEnabled = True
-        Me.DateComboBox.Location = New System.Drawing.Point(54, 56)
-        Me.DateComboBox.Name = "DateComboBox"
-        Me.DateComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.DateComboBox.TabIndex = 0
-        Me.DateComboBox.ValueMember = "movieDate"
+        Me.BookButton.Location = New System.Drawing.Point(116, 140)
+        Me.BookButton.Name = "BookButton"
+        Me.BookButton.Size = New System.Drawing.Size(75, 23)
+        Me.BookButton.TabIndex = 0
+        Me.BookButton.Text = "Book"
+        Me.BookButton.UseVisualStyleBackColor = True
         '
-        'TimeComboBox
+        'ComboBox1
         '
-        Me.TimeComboBox.DataSource = Me.MoviesBindingSource
-        Me.TimeComboBox.DisplayMember = "movieTime"
-        Me.TimeComboBox.FormattingEnabled = True
-        Me.TimeComboBox.Location = New System.Drawing.Point(54, 103)
-        Me.TimeComboBox.Name = "TimeComboBox"
-        Me.TimeComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.TimeComboBox.TabIndex = 1
-        Me.TimeComboBox.ValueMember = "movieTime"
-        '
-        'MoviebookingComboBoxDataSet
-        '
-        Me.MoviebookingComboBoxDataSet.DataSetName = "moviebookingComboBoxDataSet"
-        Me.MoviebookingComboBoxDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.ComboBox1.DataSource = Me.MoviesBindingSource
+        Me.ComboBox1.DisplayMember = "dateAndTime"
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(68, 75)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(168, 21)
+        Me.ComboBox1.TabIndex = 1
+        Me.ComboBox1.ValueMember = "dateAndTime"
         '
         'MoviesBindingSource
         '
         Me.MoviesBindingSource.DataMember = "movies"
-        Me.MoviesBindingSource.DataSource = Me.MoviebookingComboBoxDataSet
+        Me.MoviesBindingSource.DataSource = Me.MoviebookingDataSet
+        '
+        'MoviebookingDataSet
+        '
+        Me.MoviebookingDataSet.DataSetName = "moviebookingDataSet"
+        Me.MoviebookingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'MoviesTableAdapter
         '
         Me.MoviesTableAdapter.ClearBeforeFill = True
         '
-        'BookButton
+        'CancelButton
         '
-        Me.BookButton.Location = New System.Drawing.Point(54, 162)
-        Me.BookButton.Name = "BookButton"
-        Me.BookButton.Size = New System.Drawing.Size(75, 23)
-        Me.BookButton.TabIndex = 2
-        Me.BookButton.Text = "Book"
-        Me.BookButton.UseVisualStyleBackColor = True
+        Me.CancelButton.Location = New System.Drawing.Point(116, 189)
+        Me.CancelButton.Name = "CancelButton"
+        Me.CancelButton.Size = New System.Drawing.Size(75, 23)
+        Me.CancelButton.TabIndex = 2
+        Me.CancelButton.Text = "Cancel"
+        Me.CancelButton.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me.CancelButton)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.BookButton)
-        Me.Controls.Add(Me.TimeComboBox)
-        Me.Controls.Add(Me.DateComboBox)
         Me.Name = "Form1"
         Me.Text = "Form1"
-        CType(Me.MoviebookingComboBoxDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MoviesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MoviebookingDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents DateComboBox As System.Windows.Forms.ComboBox
-    Friend WithEvents TimeComboBox As System.Windows.Forms.ComboBox
-    Friend WithEvents MoviebookingComboBoxDataSet As MovieBooking.moviebookingComboBoxDataSet
-    Friend WithEvents MoviesBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents MoviesTableAdapter As MovieBooking.moviebookingComboBoxDataSetTableAdapters.moviesTableAdapter
     Friend WithEvents BookButton As System.Windows.Forms.Button
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents MoviebookingDataSet As MovieBooking.moviebookingDataSet
+    Friend WithEvents MoviesBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents MoviesTableAdapter As MovieBooking.moviebookingDataSetTableAdapters.moviesTableAdapter
+    Friend WithEvents CancelButton As System.Windows.Forms.Button
 
 End Class
