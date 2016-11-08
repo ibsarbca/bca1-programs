@@ -57,8 +57,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\itemsdb.mdf;Integrat"& _ 
-            "ed Security=True;Connect Timeout=30")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\dhaval\Documents\itemsdb.md"& _ 
+            "f;Integrated Security=True;Connect Timeout=30")>  _
         Public ReadOnly Property itemsdbConnectionString() As String
             Get
                 Return CType(Me("itemsdbConnectionString"),String)
@@ -75,9 +75,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.AddUpdateToItemTable.My.MySettings
+        Friend ReadOnly Property Settings() As Global.AddUpdateToItems.My.MySettings
             Get
-                Return Global.AddUpdateToItemTable.My.MySettings.Default
+                Return Global.AddUpdateToItems.My.MySettings.Default
             End Get
         End Property
     End Module

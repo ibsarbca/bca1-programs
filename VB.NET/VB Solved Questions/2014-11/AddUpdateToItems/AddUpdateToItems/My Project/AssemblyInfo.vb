@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("AddUpdateToItemTable")> 
+<Assembly: AssemblyTitle("AddUpdateToItems")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("AddUpdateToItemTable")> 
+<Assembly: AssemblyProduct("AddUpdateToItems")> 
 <Assembly: AssemblyCopyright("Copyright ©  2016")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("94de8cbe-6774-471d-b979-aa8715c1637c")> 
+<Assembly: Guid("92c0a5a1-1d29-4121-98df-8cb9a4f5dc13")> 
 
 ' Version information for an assembly consists of the following four values:
 '

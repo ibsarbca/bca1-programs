@@ -4,8 +4,6 @@
         Me.Validate()
         Me.ItemBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.ItemsdbDataSet)
-        Dim adapter = Me.TableAdapterManager.itemTableAdapter
-        Me.TableAdapterManager.itemTableAdapter.Update(Me.ItemsdbDataSet.item)
 
     End Sub
 
@@ -14,5 +12,4 @@
         Me.ItemTableAdapter.Fill(Me.ItemsdbDataSet.item)
 
     End Sub
-
 End Class
