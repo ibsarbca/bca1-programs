@@ -1,0 +1,1 @@
+When using an MDF file as a data source for a dataset, don't copy the MDF file into the project directory. Anywhere in the project directory, that is. When prompted to do so, when you create a new connection, click NO.
