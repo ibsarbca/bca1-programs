@@ -29,13 +29,13 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.ErrorProvider2 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.ErrorProvider3 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.UsernameErrorProvider = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GoButton = New System.Windows.Forms.Button()
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ErrorProvider3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PasswordErrorProvider = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.EmailErrorProvider = New System.Windows.Forms.ErrorProvider(Me.components)
+        CType(Me.UsernameErrorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PasswordErrorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmailErrorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UsernameTextBox
@@ -87,17 +87,10 @@ Partial Class Form1
         Me.Label3.Text = "Email"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'ErrorProvider1
+        'UsernameErrorProvider
         '
-        Me.ErrorProvider1.ContainerControl = Me
-        '
-        'ErrorProvider2
-        '
-        Me.ErrorProvider2.ContainerControl = Me
-        '
-        'ErrorProvider3
-        '
-        Me.ErrorProvider3.ContainerControl = Me
+        Me.UsernameErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
+        Me.UsernameErrorProvider.ContainerControl = Me
         '
         'GoButton
         '
@@ -107,6 +100,14 @@ Partial Class Form1
         Me.GoButton.TabIndex = 4
         Me.GoButton.Text = "GO!"
         Me.GoButton.UseVisualStyleBackColor = True
+        '
+        'PasswordErrorProvider
+        '
+        Me.PasswordErrorProvider.ContainerControl = Me
+        '
+        'EmailErrorProvider
+        '
+        Me.EmailErrorProvider.ContainerControl = Me
         '
         'Form1
         '
@@ -122,9 +123,9 @@ Partial Class Form1
         Me.Controls.Add(Me.UsernameTextBox)
         Me.Name = "Form1"
         Me.Text = "Form1"
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ErrorProvider3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UsernameErrorProvider, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PasswordErrorProvider, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmailErrorProvider, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -135,9 +136,9 @@ Partial Class Form1
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents UsernameErrorProvider As System.Windows.Forms.ErrorProvider
     Friend WithEvents GoButton As System.Windows.Forms.Button
-    Friend WithEvents ErrorProvider2 As System.Windows.Forms.ErrorProvider
-    Friend WithEvents ErrorProvider3 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents PasswordErrorProvider As System.Windows.Forms.ErrorProvider
+    Friend WithEvents EmailErrorProvider As System.Windows.Forms.ErrorProvider
 
 End Class
