@@ -1,28 +1,60 @@
 ﻿Imports System.Diagnostics
+Imports System.Data.SqlClient
+Imports System.Data.Sql
 
-Public Class Form1
+
+Public Class NewUserForm
 
     Private Sub GoButton_Click(sender As Object, e As EventArgs) Handles GoButton.Click
+        If Not AllFieldsValid() Then
+            Exit Sub
+        Else
+            Dim conn = New SqlConnection("Data Source=DEFIANT\SQLEXPRESS;Initial Catalog=registration;Integrated Security=True")
+            conn.Open()
+
+            ' First insert data:
+            Dim query = String.Format("INSERT INTO users(username, password, email) VALUES('{0}', '{1}', '{2}')", UsernameTextBox.Text, PasswordTextBox.Text, EmailTextBox.Text)
+            Dim command = New SqlCommand(query, conn)
+            command.ExecuteNonQuery()
+
+            ' Then get the control_number
+            query = String.Format("SELECT control_number FROM users WHERE username = '{0}'", UsernameTextBox.Text)
+            command = New SqlCommand(query, conn)
+            Dim control_number = command.ExecuteScalar()
+            MsgBox(control_number)
+
+            conn.Close()
+        End If
+
+
+    End Sub
+
+    Function AllFieldsValid() As Boolean
+        Dim retVal = True
+
         If Not IsValidUserName(UsernameTextBox.Text) Then
             UsernameErrorProvider.SetError(UsernameTextBox, "Username is invalid")
+            retVal = False
         Else
             UsernameErrorProvider.Clear()
         End If
 
         If Not IsValidPassword(PasswordTextBox.Text) Then
             PasswordErrorProvider.SetError(PasswordTextBox, "Password is invalid")
+            retVal = False
         Else
             PasswordErrorProvider.Clear()
         End If
 
         If Not IsValidEmail(EmailTextBox.Text) Then
             EmailErrorProvider.SetError(EmailTextBox, "Email is invalid")
+            retVal = False
         Else
             EmailErrorProvider.Clear()
         End If
 
-    End Sub
-
+        Return retVal
+    End Function
     ' Technically we should use regex here, but for the sake of simplicity...
 
     Function IsValidUserName(ByVal uname As String) As Boolean

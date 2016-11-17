@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class NewUserForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -50,14 +50,14 @@ Partial Class Form1
         Me.PasswordTextBox.Location = New System.Drawing.Point(44, 88)
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.PasswordTextBox.TabIndex = 0
+        Me.PasswordTextBox.TabIndex = 1
         '
         'EmailTextBox
         '
         Me.EmailTextBox.Location = New System.Drawing.Point(44, 143)
         Me.EmailTextBox.Name = "EmailTextBox"
         Me.EmailTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.EmailTextBox.TabIndex = 0
+        Me.EmailTextBox.TabIndex = 2
         '
         'Label1
         '
@@ -97,7 +97,7 @@ Partial Class Form1
         Me.GoButton.Location = New System.Drawing.Point(44, 189)
         Me.GoButton.Name = "GoButton"
         Me.GoButton.Size = New System.Drawing.Size(100, 23)
-        Me.GoButton.TabIndex = 4
+        Me.GoButton.TabIndex = 3
         Me.GoButton.Text = "GO!"
         Me.GoButton.UseVisualStyleBackColor = True
         '
