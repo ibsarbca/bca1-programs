@@ -31,14 +31,14 @@ Partial Class LoginForm
         '
         'UsernameTextBox
         '
-        Me.UsernameTextBox.Location = New System.Drawing.Point(78, 84)
+        Me.UsernameTextBox.Location = New System.Drawing.Point(77, 39)
         Me.UsernameTextBox.Name = "UsernameTextBox"
         Me.UsernameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.UsernameTextBox.TabIndex = 0
         '
         'PasswordTextBox
         '
-        Me.PasswordTextBox.Location = New System.Drawing.Point(78, 146)
+        Me.PasswordTextBox.Location = New System.Drawing.Point(77, 101)
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.PasswordTextBox.Size = New System.Drawing.Size(100, 20)
@@ -47,7 +47,7 @@ Partial Class LoginForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(75, 68)
+        Me.Label1.Location = New System.Drawing.Point(74, 23)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(55, 13)
         Me.Label1.TabIndex = 2
@@ -56,7 +56,7 @@ Partial Class LoginForm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(75, 130)
+        Me.Label2.Location = New System.Drawing.Point(74, 85)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 13)
         Me.Label2.TabIndex = 3
@@ -64,9 +64,9 @@ Partial Class LoginForm
         '
         'LoginButton
         '
-        Me.LoginButton.Location = New System.Drawing.Point(78, 199)
+        Me.LoginButton.Location = New System.Drawing.Point(77, 154)
         Me.LoginButton.Name = "LoginButton"
-        Me.LoginButton.Size = New System.Drawing.Size(112, 23)
+        Me.LoginButton.Size = New System.Drawing.Size(100, 23)
         Me.LoginButton.TabIndex = 4
         Me.LoginButton.Text = "Login"
         Me.LoginButton.UseVisualStyleBackColor = True
@@ -75,7 +75,7 @@ Partial Class LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.ClientSize = New System.Drawing.Size(261, 213)
         Me.Controls.Add(Me.LoginButton)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)

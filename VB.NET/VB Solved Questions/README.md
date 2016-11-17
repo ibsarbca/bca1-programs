@@ -13,3 +13,5 @@
 * Simple Forms questions are not repeated, especially ones that use a PicutreBox with a timer.
 
 * Some common programs are included in the "Common" folder
+
+* The code is often redundant and repeats in several places where it shouldn't. This is done for the sake of practice, but primarily in the interest of time. It should be noted that doing so is not considered good practice and can lead to several problems later like making debugging and updating much harder. Try Catch is also not used where it should be for the same reasons.
