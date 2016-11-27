@@ -5,7 +5,8 @@
     End Sub
 
     Private Sub CashierButton_Click(sender As Object, e As EventArgs) Handles CashierButton.Click
-        Dim frm = New LoginForm(CashierForm)
+        Dim cForm = New CashierForm()
+        Dim frm = New LoginForm(cForm)
         frm.Show()
 
         'userType = "Cashier"

@@ -5,6 +5,8 @@ Public Class LoginForm
     Dim nextForm As Form
     Public Sub New(ByRef formType As Form)
         nextForm = formType
+        MsgBox(formType.GetType().ToString())
+        InitializeComponent()
     End Sub
 
 
@@ -18,17 +20,6 @@ Public Class LoginForm
         Dim result = cmd.ExecuteScalar() ' Makes sure only one columnis returned
         If Not result Is Nothing Then
             nextForm.Show()
-            'Dim frm
-            'If Form1.userType = "Manager" Then
-            '    frm = New ManagerForm()
-            '    frm.Show()
-            'End If
-            'If Form1.userType = "Cashier" Then
-            '    frm = New CashierForm()
-            '    frm.Show()
-            'End If
-
-
         End If
     End Sub
 
