@@ -102,4 +102,7 @@ Public Class Form1
         End If
     End Function
 
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+
+    End Sub
 End Class

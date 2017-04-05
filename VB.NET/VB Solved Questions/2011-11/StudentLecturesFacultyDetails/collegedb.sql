@@ -11,7 +11,7 @@
 
 --create table lectures
 --(
---lectureid int identity(100, 1) primary key,
+--lectureid int identity(200, 1) primary key,
 --lectureName nvarchar(100) not null,
 --facultyId int FOREIGN KEY REFERENCES faculty(facultyId)
 --)
@@ -45,15 +45,15 @@
 --lectureId int FOREIGN KEY REFERENCES lectures(lectureId)
 --)
 
---insert into classesXlectures values('bca1', 108)
---insert into classesXlectures values('bca1', 109)
---insert into classesXlectures values('bca1', 110)
---insert into classesXlectures values('bca2', 101)
---insert into classesXlectures values('bca2', 102)
---insert into classesXlectures values('bca2', 103)
---insert into classesXlectures values('bca3', 104)
---insert into classesXlectures values('bca3', 105)
---insert into classesXlectures values('bca3', 106)
+--insert into classesXlectures values('bca1', 208)
+--insert into classesXlectures values('bca1', 209)
+--insert into classesXlectures values('bca1', 210)
+--insert into classesXlectures values('bca2', 201)
+--insert into classesXlectures values('bca2', 202)
+--insert into classesXlectures values('bca2', 203)
+--insert into classesXlectures values('bca3', 204)
+--insert into classesXlectures values('bca3', 205)
+--insert into classesXlectures values('bca3', 206)
 
 
 --insert into students(name, age, classname) values('abc', 20, 'bca1')
