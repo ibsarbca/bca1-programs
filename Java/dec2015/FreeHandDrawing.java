@@ -54,7 +54,7 @@ public class FreeHandDrawing extends Applet {
 
     public void paint(Graphics g) {
         if("line".equals(shapeChoice.getSelectedItem())) {
-            g.drawLine(mouseX, mouseY, moveX - mouseX, moveY - mouseY);
+            g.drawLine(mouseX, mouseY, moveX, moveY);
         } else if ("arc".equals(shapeChoice.getSelectedItem())) {
             g.drawArc(mouseX, mouseY, moveX - mouseX, moveY - mouseY, 24, 180);
         }
