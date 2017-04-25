@@ -3,9 +3,9 @@ public class StringFunctions {
     public static void main(String[] args) {
         String val = "PGDCA Pune University Examinations";
 
-        System.out.println(val.indexOf('P', val.indexOf('P')));
+        System.out.println(val.indexOf('P', val.indexOf('P') + 1));
 
-        System.out.println(val.indexOf(val.lastIndexOf('E')));
+        System.out.println(val.indexOf('E', val.lastIndexOf('E')));
 
         System.out.println(val.indexOf(val.charAt(12)));
 
