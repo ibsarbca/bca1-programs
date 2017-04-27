@@ -4,7 +4,7 @@ select distinct(city) from emp;
 
 select min(salary) from emp;
 
-select * from emp where to_char(join_date, 'MM') = '04';
+select * from emp where to_char(join_date, 'MONTH') = 'APRIL';
 
 select name, city, job, dname from emp join dept on emp.dept_no = dept.dept_no where dname='EDP';
 

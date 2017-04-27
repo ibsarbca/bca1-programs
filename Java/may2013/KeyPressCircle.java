@@ -32,7 +32,7 @@ public class KeyPressCircle extends Applet implements KeyListener {
 
     public void keyTyped(KeyEvent ev) {
         //System.out.println(ev.getKeyChar());
-        System.out.println(ev.getKeyChar());
+        System.out.println(ev.getKeyChar( b));
 
         if (ev.getKeyChar() == 'S' || ev.getKeyChar() == 'D')
             rad += 10;
