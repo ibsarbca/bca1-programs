@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace LoginForm
+{
+    public partial class WebForm1 : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (TextBox1.Text != "user" && TextBox2.Text != "1234")
+            {
+                Response.Redirect("Error.aspx");
+            }
+            else
+            {
+                Session.Add("user", TextBox1.Text);
+                Response.Redirect("Success.aspx");
+            }
+        }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

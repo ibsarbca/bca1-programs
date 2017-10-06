@@ -1,0 +1,6 @@
+E:\Mumbai\bca1-programs\CSharp\may2017\IsQueryStringEmpty\IsQueryStringEmpty\obj\Debug\IsQueryStringEmpty.csprojResolveAssemblyReference.cache
+E:\Mumbai\bca1-programs\CSharp\may2017\IsQueryStringEmpty\IsQueryStringEmpty\bin\IsQueryStringEmpty.dll.config
+E:\Mumbai\bca1-programs\CSharp\may2017\IsQueryStringEmpty\IsQueryStringEmpty\bin\IsQueryStringEmpty.dll
+E:\Mumbai\bca1-programs\CSharp\may2017\IsQueryStringEmpty\IsQueryStringEmpty\bin\IsQueryStringEmpty.pdb
+E:\Mumbai\bca1-programs\CSharp\may2017\IsQueryStringEmpty\IsQueryStringEmpty\obj\Debug\IsQueryStringEmpty.dll
+E:\Mumbai\bca1-programs\CSharp\may2017\IsQueryStringEmpty\IsQueryStringEmpty\obj\Debug\IsQueryStringEmpty.pdb

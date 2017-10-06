@@ -1,0 +1,6 @@
+E:\Mumbai\bca1-programs\CSharp\may2017\CustomerDetails\CustomerDetails\bin\CustomerDetails.dll.config
+E:\Mumbai\bca1-programs\CSharp\may2017\CustomerDetails\CustomerDetails\bin\CustomerDetails.dll
+E:\Mumbai\bca1-programs\CSharp\may2017\CustomerDetails\CustomerDetails\bin\CustomerDetails.pdb
+E:\Mumbai\bca1-programs\CSharp\may2017\CustomerDetails\CustomerDetails\obj\Debug\CustomerDetails.csprojResolveAssemblyReference.cache
+E:\Mumbai\bca1-programs\CSharp\may2017\CustomerDetails\CustomerDetails\obj\Debug\CustomerDetails.dll
+E:\Mumbai\bca1-programs\CSharp\may2017\CustomerDetails\CustomerDetails\obj\Debug\CustomerDetails.pdb

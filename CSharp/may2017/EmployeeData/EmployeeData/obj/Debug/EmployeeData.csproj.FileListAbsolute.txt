@@ -1,0 +1,6 @@
+E:\Mumbai\bca1-programs\CSharp\may2017\EmployeeData\EmployeeData\bin\EmployeeData.dll.config
+E:\Mumbai\bca1-programs\CSharp\may2017\EmployeeData\EmployeeData\bin\EmployeeData.dll
+E:\Mumbai\bca1-programs\CSharp\may2017\EmployeeData\EmployeeData\bin\EmployeeData.pdb
+E:\Mumbai\bca1-programs\CSharp\may2017\EmployeeData\EmployeeData\obj\Debug\EmployeeData.dll
+E:\Mumbai\bca1-programs\CSharp\may2017\EmployeeData\EmployeeData\obj\Debug\EmployeeData.pdb
+E:\Mumbai\bca1-programs\CSharp\may2017\EmployeeData\EmployeeData\obj\Debug\EmployeeData.csprojResolveAssemblyReference.cache
