@@ -1,0 +1,5 @@
+E:\Mumbai\bca1-programs\CSharp\may2017\StudentFileSave\StudentFileSave\bin\Debug\StudentFileSave.exe
+E:\Mumbai\bca1-programs\CSharp\may2017\StudentFileSave\StudentFileSave\bin\Debug\StudentFileSave.pdb
+E:\Mumbai\bca1-programs\CSharp\may2017\StudentFileSave\StudentFileSave\obj\Debug\StudentFileSave.csprojResolveAssemblyReference.cache
+E:\Mumbai\bca1-programs\CSharp\may2017\StudentFileSave\StudentFileSave\obj\Debug\StudentFileSave.exe
+E:\Mumbai\bca1-programs\CSharp\may2017\StudentFileSave\StudentFileSave\obj\Debug\StudentFileSave.pdb

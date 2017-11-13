@@ -1,0 +1,6 @@
+E:\Mumbai\bca1-programs\CSharp\may2017\Shareholder\Shareholder\bin\Shareholder.dll.config
+E:\Mumbai\bca1-programs\CSharp\may2017\Shareholder\Shareholder\bin\Shareholder.dll
+E:\Mumbai\bca1-programs\CSharp\may2017\Shareholder\Shareholder\bin\Shareholder.pdb
+E:\Mumbai\bca1-programs\CSharp\may2017\Shareholder\Shareholder\obj\Debug\Shareholder.csprojResolveAssemblyReference.cache
+E:\Mumbai\bca1-programs\CSharp\may2017\Shareholder\Shareholder\obj\Debug\Shareholder.dll
+E:\Mumbai\bca1-programs\CSharp\may2017\Shareholder\Shareholder\obj\Debug\Shareholder.pdb
