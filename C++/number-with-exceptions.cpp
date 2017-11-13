@@ -1,7 +1,7 @@
 #include <iostream>
 #include <exception>
 #include <string>
-
+#include <cstdlib>
 
 using namespace std;
 
@@ -28,7 +28,7 @@ int main()
 
     int i = 0;
 
-    const char* input_string_arr[256];
+    const char* input_string_arr = input_string.c_str();
 
     char c = input_string_arr[0];
     while(1)
