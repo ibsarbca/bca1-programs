@@ -16,15 +16,13 @@ Verify results
 
 `ping 128.10.10.10`
 
-###
-
 ### Hostnames
 
 Set hostname
 
 `sudo hostname server1.example.com`
 
-# Check hostname
+Check hostname
 
 `hostname`
 
