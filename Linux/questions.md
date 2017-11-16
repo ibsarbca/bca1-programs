@@ -227,3 +227,21 @@ Assuming the ppid is 2344
 `nice -20 2344`
 
 `renice -20 2344`
+
+### Soft links and Hard Links
+
+Create original file
+
+`touch file`
+
+Create soft link
+
+`ln -s file shortcut-to-file`
+
+Create hard link
+
+`ln file shortcut-to-file-hard`
+
+
+
+
