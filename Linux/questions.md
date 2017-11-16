@@ -242,6 +242,10 @@ Create hard link
 
 `ln file shortcut-to-file-hard`
 
+### Compare sizes of two directories
+
+`du -hs /boot && du -hs /bootbackup`
+
 
 
 
