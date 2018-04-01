@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Advertisements>
+  <Ad>
+    <ImageUrl>~/ad01.gif</ImageUrl>
+    <NavigateUrl>~/Default.aspx</NavigateUrl>
+    <Impressions>100</Impressions>
+    <AlternateText></AlternateText>
+
+  </Ad>
+  <Ad>
+    <ImageUrl>~/ad02.gif</ImageUrl>
+    <NavigateUrl>~/Default.aspx</NavigateUrl>
+    <Impressions>100</Impressions>
+    <AlternateText></AlternateText>
+  </Ad>
+</Advertisements>
