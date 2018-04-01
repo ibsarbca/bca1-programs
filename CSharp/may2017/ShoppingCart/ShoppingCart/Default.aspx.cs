@@ -12,14 +12,17 @@ namespace ShoppingCart
             
         protected void Page_Load(object sender, EventArgs e)
         {
-            cookie = new HttpCookie("cart");
+        //    cookie = new HttpCookie("cart");
+        //    cookie.Values.Add("Tables", "0");
+        //    cookie.Values.Add("Chair", "0");
+        //    cookie.Values.Add("Bottles", "0");
+
+        //    Response.Cookies.Add(cookie);
         }
 
         protected void AddToCart(object sender, EventArgs e)
         {
-            cookie.Values.Add("Tables", "0");
-            cookie.Values.Add("Chair", "0");
-            cookie.Values.Add("Bottles", "0");
+            HttpCookie cookie = Request.Cookies["cart"];
 
             Button btn = (Button)sender;
 

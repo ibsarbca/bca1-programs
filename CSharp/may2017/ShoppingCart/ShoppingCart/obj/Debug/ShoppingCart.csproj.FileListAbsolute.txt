@@ -3,3 +3,5 @@ E:\Mumbai\bca1-programs\CSharp\may2017\ShoppingCart\ShoppingCart\bin\ShoppingCar
 E:\Mumbai\bca1-programs\CSharp\may2017\ShoppingCart\ShoppingCart\bin\ShoppingCart.pdb
 E:\Mumbai\bca1-programs\CSharp\may2017\ShoppingCart\ShoppingCart\obj\Debug\ShoppingCart.dll
 E:\Mumbai\bca1-programs\CSharp\may2017\ShoppingCart\ShoppingCart\obj\Debug\ShoppingCart.pdb
+E:\Mumbai\bca1-programs\CSharp\may2017\ShoppingCart\ShoppingCart\obj\Debug\ShoppingCart.csprojResolveAssemblyReference.cache
+E:\Mumbai\bca1-programs\CSharp\may2017\ShoppingCart\ShoppingCart\obj\Debug\ShoppingCart.csproj.CoreCompileInputs.cache
